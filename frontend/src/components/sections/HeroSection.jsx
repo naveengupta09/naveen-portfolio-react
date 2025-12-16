@@ -1,11 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Badge } from "../ui/badge";
+import { Badge } from "@/components/ui/badge";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from "@/components/ui/alert-dialog";
 import { LayoutTextFlip } from "../ui/layout-text-flip";
 import TooltipWrapper from "../TooltipWrapper";
+import resume from "../../assets/Naveen_KUMAR.pdf";
 
 const HeroSection = () => {
+  const [showDownloadDialog, setShowDownloadDialog] = useState(false);
+
   const typingTexts = [
     "Full Stack Developer",
     "Problem Solver",
@@ -48,6 +61,16 @@ const HeroSection = () => {
     },
   ];
 
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = resume;
+    link.download = "Naveen_KUMAR.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    setShowDownloadDialog(false);
+  };
+
   return (
     <section className="flex items-center">
       <div className="py-8 w-full">
@@ -83,14 +106,12 @@ const HeroSection = () => {
 
               {/* Action Buttons */}
               <div className="flex flex-wrap gap-4 pt-4">
-                <Button className="h-12 rounded-full" asChild>
-                  <a
-                    href="./assets/Naveen_KUMAR.pdf"
-                    download="Naveen_KUMAR.pdf"
-                  >
-                    <Download className="mr-2 h-5 w-5" />
-                    Download Resume
-                  </a>
+                <Button 
+                  className="h-12 rounded-full"
+                  onClick={() => setShowDownloadDialog(true)}
+                >
+                  <Download className="mr-2 h-5 w-5" />
+                  Download Resume
                 </Button>
 
                 <Button
@@ -133,6 +154,24 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
+
+      {/* Download Alert Dialog */}
+      <AlertDialog open={showDownloadDialog} onOpenChange={setShowDownloadDialog}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>Download Resume</AlertDialogTitle>
+            <AlertDialogDescription>
+              You're about to download Naveen Kumar's resume. This PDF contains professional experience, skills, and contact information.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel>Cancel</AlertDialogCancel>
+            <AlertDialogAction onClick={handleDownload}>
+              Download
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </section>
   );
 };

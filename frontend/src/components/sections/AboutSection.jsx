@@ -63,13 +63,13 @@ const AboutSection = () => {
         {/* Technologies */}
         <div className="pt-6">
           <h3 className="text-xl font-semibold mb-4">Technologies & Tools</h3>
-          <div className="grid grid-cols-3 md:grid-cols-4 gap-4">
+          <div className="flex gap-2 flex-wrap">
             {technologies.map((tech) => (
               <div
                 key={tech.name}
-                className="flex flex-col items-center gap-2 p-4 rounded-lg bg-muted/50 hover:bg-muted transition-all hover:scale-105 duration-300"
+                className="flex items-center gap-2 p-3 py-1.5 rounded-lg bg-muted/50 hover:bg-muted transition-all hover:scale-105 duration-300"
               >
-                <img src={tech.icon} alt={tech.name} className={cn("w-10 h-10", tech.className)} />
+                <img src={tech.icon} alt={tech.name} className={cn("size-6", tech.className)} />
                 <span className="text-sm font-medium text-center">
                   {tech.name}
                 </span>

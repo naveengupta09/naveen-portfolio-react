@@ -12,7 +12,7 @@ const HomePage = () => {
   return (
     <div className="">
       <Header />
-      <main className="max-w-4xl mx-auto min-h-svh p-4 space-y-20">
+      <main className="max-w-4xl mx-auto min-h-svh p-4 space-y-20 mb-20">
         <HeroSection />
         <ContributionSection />
         <AboutSection />

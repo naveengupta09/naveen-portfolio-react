@@ -124,7 +124,7 @@ const ProjectsSection = () => {
           {displayedProjects.map((project, index) => (
             <div
               key={project.id}
-              className="group rounded-lg border bg-muted/30 overflow-hidden hover:shadow-lg transition-all duration-300 animate-in fade-in slide-in-from-bottom"
+              className="group rounded-2xl border bg-muted/30 overflow-hidden hover:shadow-lg transition-all duration-300 animate-in fade-in slide-in-from-bottom"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               {/* Project Image */}
