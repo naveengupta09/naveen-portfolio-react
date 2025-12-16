@@ -63,7 +63,7 @@ const AboutSection = () => {
         {/* Technologies */}
         <div className="pt-6">
           <h3 className="text-xl font-semibold mb-4">Technologies & Tools</h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-3 md:grid-cols-4 gap-4">
             {technologies.map((tech) => (
               <div
                 key={tech.name}
