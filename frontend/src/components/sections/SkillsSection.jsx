@@ -71,7 +71,7 @@ export default function SkillsSection() {
   const currentData = skillsData[activeTab];
 
   return (
-    <section className="w-full">
+    <section id="skills" className="w-full">
       <h2 className="text-2xl md:text-3xl font-bold mb-12">My Skills</h2>
 
       <div className="grid gap-6">

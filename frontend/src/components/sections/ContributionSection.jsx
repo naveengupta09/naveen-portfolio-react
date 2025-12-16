@@ -93,7 +93,7 @@ const ContributionSection = () => {
     : { gridTemplate: "", monthNames: [] };
 
   return (
-    <div className="max-w-6xl mx-auto">
+    <section id="github-contributions" className="max-w-6xl mx-auto">
       <div className="p-0">
         <header className="mb-6">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
@@ -212,7 +212,7 @@ const ContributionSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

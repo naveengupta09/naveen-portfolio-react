@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { ExternalLink, Github, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { cn } from "@/lib/utils";
 
 const ProjectsSection = () => {
   const [visibleProjects, setVisibleProjects] = useState(6);
@@ -17,11 +18,11 @@ const ProjectsSection = () => {
       demoUrl: "https://geu-erp.onrender.com/login",
       codeUrl: "https://github.com/abhijeetsinghrajput/geu-erp.git",
       technologies: [
-        "Next.js",
-        "Node.js",
-        "TypeScript",
-        "Tailwind",
-        "Shadcn UI",
+        { label: "Next.js", icon: "/icons/next-js.svg", className: "dark:invert-0 invert" },
+        { label: "Node.js", icon: "/icons/node-js.svg" },
+        { label: "TypeScript", icon: "/icons/typescript.svg" },
+        { label: "Tailwind", icon: "/icons/tailwind.svg" },
+        { label: "Shadcn UI", icon: "/icons/shadcn.svg", className: "dark:invert-0 invert" },
       ],
     },
     {
@@ -31,10 +32,15 @@ const ProjectsSection = () => {
         "A clean and collaborative note-management platform to write, organize, and share notes. Supports smart formatting, LaTeX, real-time collaboration, and distraction-free UI.",
       image:
         "https://mrcodium.netlify.app/assets/project-preview/notehub-preview.webp",
-
       demoUrl: "https://notehub-38kp.onrender.com/",
       codeUrl: "https://github.com/abhijeetSinghRajput/notehub-production.git",
-      technologies: ["React", "Express", "Node.js", "MongoDB", "Socket IO"],
+      technologies: [
+        { label: "React", icon: "/icons/react.svg" },
+        { label: "Express", icon: "/icons/express.svg", className: "dark:invert-0 invert"  },
+        { label: "Node.js", icon: "/icons/node-js.svg" },
+        { label: "MongoDB", icon: "/icons/mongo-db.svg" },
+        { label: "Socket IO", icon: "/icons/socket-io.svg", className: "dark:invert-0 invert"  },
+      ],
     },
     {
       id: 3,
@@ -45,7 +51,11 @@ const ProjectsSection = () => {
         "https://mrcodium.netlify.app/assets/project-preview/chess-preview1.webp",
       demoUrl: "https://chessleague.netlify.app",
       codeUrl: "https://github.com/abhijeetSinghRajput/ChessEngine.git",
-      technologies: ["HTML", "CSS", "JavaScript"],
+      technologies: [
+        { label: "HTML", icon: "/icons/html.svg" },
+        { label: "CSS", icon: "/icons/css.svg" },
+        { label: "JavaScript", icon: "/icons/javascript.svg" },
+      ],
     },
     {
       id: 4,
@@ -54,11 +64,14 @@ const ProjectsSection = () => {
         "An interactive visualizer that demonstrates popular pathfinding algorithms like A*, BFS, DFS, and Dijkstra in real-time for clearer understanding.",
       image:
         "https://mrcodium.netlify.app/assets/project-preview/pathfinder-preview.webp",
-
       demoUrl: "https://path-explorer.netlify.app",
       codeUrl:
         "https://github.com/abhijeetSinghRajput/pathFinderVisualizer.git",
-      technologies: ["HTML", "CSS", "JavaScript"],
+      technologies: [
+        { label: "HTML", icon: "/icons/html.svg" },
+        { label: "CSS", icon: "/icons/css.svg" },
+        { label: "JavaScript", icon: "/icons/javascript.svg" },
+      ],
     },
     {
       id: 5,
@@ -69,7 +82,13 @@ const ProjectsSection = () => {
         "https://mrcodium.netlify.app/assets/project-preview/whisper-preview.webp",
       demoUrl: "https://whisper-chat-app-m4ks.onrender.com",
       codeUrl: "https://github.com/abhijeetSinghRajput/whisper",
-      technologies: ["React", "Express", "Node.js", "MongoDB", "Socket IO"],
+      technologies: [
+        { label: "React", icon: "/icons/react.svg" },
+        { label: "Express", icon: "/icons/express.svg", className: "dark:invert-0 invert"  },
+        { label: "Node.js", icon: "/icons/node-js.svg" },
+        { label: "MongoDB", icon: "/icons/mongo-db.svg" },
+        { label: "Socket IO", icon: "/icons/socket-io.svg" },
+      ],
     },
     {
       id: 6,
@@ -80,7 +99,11 @@ const ProjectsSection = () => {
         "https://mrcodium.netlify.app/assets/project-preview/sorting-preview.webp",
       demoUrl: "https://sortsimulator.netlify.app",
       codeUrl: "https://github.com/abhijeetSinghRajput/sorting-simulation.git",
-      technologies: ["HTML", "CSS", "JavaScript"],
+      technologies: [
+        { label: "HTML", icon: "/icons/html.svg" },
+        { label: "CSS", icon: "/icons/css.svg" },
+        { label: "JavaScript", icon: "/icons/javascript.svg" },
+      ],
     },
   ];
 
@@ -92,7 +115,7 @@ const ProjectsSection = () => {
   const hasMoreProjects = visibleProjects < projects.length;
 
   return (
-    <section className="animate-in fade-in slide-in-from-bottom duration-700">
+    <section id="projects" className="animate-in fade-in slide-in-from-bottom duration-700">
       <div className="container mx-auto max-w-7xl">
         <h2 className="text-2xl md:text-3xl font-bold mb-12">Projects</h2>
 
@@ -125,11 +148,16 @@ const ProjectsSection = () => {
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (
                     <Badge
-                      key={tech}
+                      key={tech.label}
                       variant="secondary"
-                      className="text-xs bg-muted/50"
+                      className="text-xs bg-muted/50 flex items-center gap-1.5 px-2.5 py-1"
                     >
-                      {tech}
+                      <img
+                        src={tech.icon}
+                        alt={`${tech.label} icon`}
+                        className={cn("w-3.5 h-3.5 object-contain", tech.className)}
+                      />
+                      <span>{tech.label}</span>
                     </Badge>
                   ))}
                 </div>

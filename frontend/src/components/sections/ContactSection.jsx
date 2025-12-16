@@ -44,6 +44,7 @@ const ContactSection = () => {
 
   return (
     <section
+      id="contact"
       className="animate-in fade-in slide-in-from-bottom duration-700"
     >
       <div className="container mx-auto max-w-6xl">

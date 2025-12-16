@@ -6,7 +6,7 @@ const AboutSection = () => {
     { name: "React.js", icon: "icons/react.svg" },
     { name: "Next.js", icon: "icons/next-js.svg", className: "dark:invert-0 invert" },
     { name: "Node.js", icon: "icons/node-js.svg" },
-    { name: "Express.js", icon: "icons/express.svg" },
+    { name: "Express.js", icon: "icons/express.svg", className: "dark:invert-0 invert"  },
     { name: "MongoDB", icon: "icons/mongo-db.svg" },
     { name: "Tailwind", icon: "icons/tailwind.svg" },
     { name: "TypeScript", icon: "icons/typescript.svg" },
@@ -14,7 +14,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section className="animate-in fade-in slide-in-from-bottom duration-700">
+    <section id="about" className="animate-in fade-in slide-in-from-bottom duration-700">
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-2xl md:text-3xl font-bold mb-12">About Me</h2>
 
