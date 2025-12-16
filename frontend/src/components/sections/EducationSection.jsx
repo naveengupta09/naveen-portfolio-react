@@ -61,7 +61,7 @@ const EducationSection = () => {
                 {/* Timeline Content */}
                 <div className="ml-12">
                   <div className="p-6 rounded-lg bg-muted/50 border hover:bg-muted transition-all duration-300 hover:shadow-lg">
-                    <h3 className="text-xl font-semibold mb-2">{edu.degree}</h3>
+                    <h3 className="text-lg sm:text-xl font-semibold mb-2">{edu.degree}</h3>
                     <p className="text-muted-foreground mb-1">
                       {edu.institution}
                     </p>

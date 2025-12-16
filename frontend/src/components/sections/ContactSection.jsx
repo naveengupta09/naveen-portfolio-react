@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Mail, MapPin, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "../ui/input";
-import { Textarea } from "../ui/textarea";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -15,10 +15,14 @@ const ContactSection = () => {
     {
       icon: Mail,
       text: "naveengupta@example.com",
+      href: "mailto:naveengupta@example.com",
+      label: "Send an email"
     },
     {
       icon: MapPin,
       text: "Dehradun, India",
+      href: "https://www.google.com/maps/search/?api=1&query=Dehradun,India",
+      label: "Open in Google Maps"
     },
   ];
 
@@ -30,8 +34,7 @@ const ContactSection = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = () => {
     console.log("Form submitted:", formData);
     // Add your form submission logic here
     // Reset after submission
@@ -63,15 +66,19 @@ const ContactSection = () => {
               {contactMethods.map((method, index) => {
                 const IconComponent = method.icon;
                 return (
-                  <div
+                  <a
                     key={index}
-                    className="flex items-center gap-4 p-4 rounded-lg bg-muted/50 hover:bg-muted transition-all duration-300"
+                    href={method.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={method.label}
+                    className="flex items-center gap-4 p-4 rounded-lg bg-muted/50 hover:bg-muted hover:scale-[1.02] transition-all duration-300 cursor-pointer group"
                   >
-                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                    <div className="w-10 h-10 rounded-full bg-primary/10 group-hover:bg-primary/20 flex items-center justify-center transition-colors">
                       <IconComponent className="w-5 h-5 text-primary" />
                     </div>
-                    <span className="text-foreground">{method.text}</span>
-                  </div>
+                    <span className="text-foreground group-hover:text-primary transition-colors">{method.text}</span>
+                  </a>
                 );
               })}
             </div>
@@ -87,7 +94,6 @@ const ContactSection = () => {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                required
                 className="h-12 rounded-xl peer px-4"
                 placeholder="Your Name"
               />
@@ -107,8 +113,6 @@ const ContactSection = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                required
-                // className="peer w-full px-4 py-3 rounded-lg border bg-background focus:outline-none focus:ring-2 focus:ring-primary transition-all placeholder-transparent"
                 className="h-12 rounded-xl peer px-4"
                 placeholder="Your Email"
               />
@@ -128,7 +132,6 @@ const ContactSection = () => {
                 value={formData.message}
                 onChange={handleChange}
                 rows={5}
-                required
                 className="peer p-4 rounded-xl"
                 placeholder="Your Message"
               />
