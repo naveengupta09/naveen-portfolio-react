@@ -1,9 +1,10 @@
+import { cn } from "@/lib/utils";
 import React from "react";
 
 const AboutSection = () => {
   const technologies = [
     { name: "React.js", icon: "icons/react.svg" },
-    { name: "Next.js", icon: "icons/next-js.svg" },
+    { name: "Next.js", icon: "icons/next-js.svg", className: "dark:invert-0 invert" },
     { name: "Node.js", icon: "icons/node-js.svg" },
     { name: "Express.js", icon: "icons/express.svg" },
     { name: "MongoDB", icon: "icons/mongo-db.svg" },
@@ -13,20 +14,25 @@ const AboutSection = () => {
   ];
 
   return (
-    <section
-      className="animate-in fade-in slide-in-from-bottom duration-700"
-    >
+    <section className="animate-in fade-in slide-in-from-bottom duration-700">
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-2xl md:text-3xl font-bold mb-12">About Me</h2>
 
         <div className="flex flex-col md:flex-row gap-12 items-start">
           {/* About Image */}
           <div className="w-full md:w-1/3 flex justify-center">
-            <div className="w-64 h-64 rounded-2xl overflow-hidden bg-muted">
+            <div>
+              <div className="w-52 h-52 rounded-2xl overflow-hidden bg-muted">
+                <img
+                  src="./naveen.jpg"
+                  alt="Naveen Kumar"
+                  className="w-full h-full object-cover"
+                />
+              </div>
               <img
-                src="./naveen.jpg"
-                alt="Naveen Kumar"
-                className="w-full h-full object-cover"
+                className="invert dark:invert-0 h-12 mx-auto mt-2 -rotate-12"
+                src="/naveen-signature.svg"
+                alt="naveen signature"
               />
             </div>
           </div>
@@ -63,7 +69,7 @@ const AboutSection = () => {
                 key={tech.name}
                 className="flex flex-col items-center gap-2 p-4 rounded-lg bg-muted/50 hover:bg-muted transition-all hover:scale-105 duration-300"
               >
-                <img src={tech.icon} alt={tech.name} className="w-10 h-10" />
+                <img src={tech.icon} alt={tech.name} className={cn("w-10 h-10", tech.className)} />
                 <span className="text-sm font-medium text-center">
                   {tech.name}
                 </span>

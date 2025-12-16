@@ -12,7 +12,8 @@ const ProjectsSection = () => {
       title: "GEU ERP Redesign",
       description:
         "A modern, fast, and student-friendly redesign of the GEU Legacy Portal with optimized UI, faster navigation, and easy access to academics, attendance, results, and more.",
-      image: "assets/project-preview/geu-preview.webp",
+      image:
+        "https://mrcodium.netlify.app/assets/project-preview/geu-preview.webp",
       demoUrl: "https://geu-erp.onrender.com/login",
       codeUrl: "https://github.com/abhijeetsinghrajput/geu-erp.git",
       technologies: [
@@ -28,7 +29,9 @@ const ProjectsSection = () => {
       title: "Notehub",
       description:
         "A clean and collaborative note-management platform to write, organize, and share notes. Supports smart formatting, LaTeX, real-time collaboration, and distraction-free UI.",
-      image: "assets/project-preview/notehub-preview.webp",
+      image:
+        "https://mrcodium.netlify.app/assets/project-preview/notehub-preview.webp",
+
       demoUrl: "https://notehub-38kp.onrender.com/",
       codeUrl: "https://github.com/abhijeetSinghRajput/notehub-production.git",
       technologies: ["React", "Express", "Node.js", "MongoDB", "Socket IO"],
@@ -38,7 +41,8 @@ const ProjectsSection = () => {
       title: "Chess Engine",
       description:
         "A strong chess engine built with advanced algorithms capable of defeating experienced players. Features strategic move evaluation and smart decision-making.",
-      image: "assets/project-preview/chess-preview1.webp",
+      image:
+        "https://mrcodium.netlify.app/assets/project-preview/chess-preview1.webp",
       demoUrl: "https://chessleague.netlify.app",
       codeUrl: "https://github.com/abhijeetSinghRajput/ChessEngine.git",
       technologies: ["HTML", "CSS", "JavaScript"],
@@ -48,7 +52,9 @@ const ProjectsSection = () => {
       title: "Path Finder Visualizer",
       description:
         "An interactive visualizer that demonstrates popular pathfinding algorithms like A*, BFS, DFS, and Dijkstra in real-time for clearer understanding.",
-      image: "assets/project-preview/pathfinder-preview.webp",
+      image:
+        "https://mrcodium.netlify.app/assets/project-preview/pathfinder-preview.webp",
+
       demoUrl: "https://path-explorer.netlify.app",
       codeUrl:
         "https://github.com/abhijeetSinghRajput/pathFinderVisualizer.git",
@@ -59,7 +65,8 @@ const ProjectsSection = () => {
       title: "Whisper Chat App",
       description:
         "A fast and secure real-time chat application with typing indicators, live messaging, authentication, and smooth UI built using MERN stack.",
-      image: "assets/project-preview/whisper-preview.webp",
+      image:
+        "https://mrcodium.netlify.app/assets/project-preview/whisper-preview.webp",
       demoUrl: "https://whisper-chat-app-m4ks.onrender.com",
       codeUrl: "https://github.com/abhijeetSinghRajput/whisper",
       technologies: ["React", "Express", "Node.js", "MongoDB", "Socket IO"],
@@ -69,7 +76,8 @@ const ProjectsSection = () => {
       title: "Sorting Simulator",
       description:
         "A real-time visualization tool to learn how sorting algorithms work with step-by-step animations for Bubble, Selection, Insertion, Merge, and Quick Sort.",
-      image: "assets/project-preview/sorting-preview.webp",
+      image:
+        "https://mrcodium.netlify.app/assets/project-preview/sorting-preview.webp",
       demoUrl: "https://sortsimulator.netlify.app",
       codeUrl: "https://github.com/abhijeetSinghRajput/sorting-simulation.git",
       technologies: ["HTML", "CSS", "JavaScript"],
@@ -84,12 +92,9 @@ const ProjectsSection = () => {
   const hasMoreProjects = visibleProjects < projects.length;
 
   return (
-    <section
-      className="animate-in fade-in slide-in-from-bottom duration-700"
-    >
+    <section className="animate-in fade-in slide-in-from-bottom duration-700">
       <div className="container mx-auto max-w-7xl">
         <h2 className="text-2xl md:text-3xl font-bold mb-12">Projects</h2>
-
 
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 gap-6 mb-12">
@@ -131,28 +136,24 @@ const ProjectsSection = () => {
 
                 {/* Project Links */}
                 <div className="grid grid-cols-2 gap-4 pt-2">
-                  <Button className="overflow-hidden rounded-xl h-auto px-0 py-0">
-                    <a
-                      href={project.demoUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="h-11 flex items-center justify-center gap-2"
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                      Live Demo
-                    </a>
-                  </Button>
-                  <Button variant="secondary" className="overflow-hidden h-auto rounded-xl px-0 py-0">
-                    <a
-                      href={project.codeUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="h-11 flex items-center justify-center gap-2"
-                    >
-                      <Github className="w-4 h-4" />
-                      Source Code
-                    </a>
-                  </Button>
+                  <a
+                    href={project.demoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-primary text-primary-foreground rounded-xl hover:brightness-90 transition-all h-11 flex items-center justify-center gap-2"
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                    Live Demo
+                  </a>
+                  <a
+                    href={project.codeUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-secondary text-secondary-foreground rounded-xl hover:brightness-90 transition-all h-11 flex items-center justify-center gap-2"
+                  >
+                    <Github className="w-4 h-4" />
+                    Source Code
+                  </a>
                 </div>
               </div>
             </div>

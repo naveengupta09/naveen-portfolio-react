@@ -3,6 +3,7 @@ import { Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "../ui/badge";
 import { LayoutTextFlip } from "../ui/layout-text-flip";
+import TooltipWrapper from "../TooltipWrapper";
 
 const HeroSection = () => {
   const typingTexts = [
@@ -48,8 +49,8 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className="h-svh flex items-center">
-      <div className="py-16 w-full">
+    <section className="flex items-center">
+      <div className="py-8 w-full">
         <div>
           {/* Hero Content */}
           <div className="flex gap-8 flex-col-reverse sm:flex-row mb-12">
@@ -107,7 +108,7 @@ const HeroSection = () => {
               <div className="aspect-square size-52 sm:size-80 rounded-full bg-muted overflow-hidden">
                 <img
                   className="w-full h-full object-cover"
-                  src="/naveen.jpg"
+                  src="/naveen-profile.png"
                   alt=""
                 />
               </div>
@@ -117,16 +118,17 @@ const HeroSection = () => {
           {/* Social Links */}
           <div className="flex justify-center gap-4 flex-wrap animate-in fade-in slide-in-from-bottom duration-700">
             {socialLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="size-12 rounded-full flex items-center justify-center border bg-muted/50 hover:bg-muted transition-all"
-                aria-label={link.label}
-              >
-                <img src={link.icon} alt={link.label} className="w-6 h-6" />
-              </a>
+              <TooltipWrapper key={link.label} content={link.label}>
+                <a
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="size-12 rounded-full flex items-center justify-center border bg-muted/50 hover:bg-muted transition-all"
+                  aria-label={link.label}
+                >
+                  <img src={link.icon} alt={link.label} className="w-6 h-6 dark:invert-0 invert" />
+                </a>
+              </TooltipWrapper>
             ))}
           </div>
         </div>

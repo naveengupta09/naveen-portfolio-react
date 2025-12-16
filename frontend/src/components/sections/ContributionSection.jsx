@@ -96,7 +96,7 @@ const ContributionSection = () => {
     <div className="max-w-6xl mx-auto">
       <div className="p-0">
         <header className="mb-6">
-          <h2 className="text-2xl md:text-3xl font-bold mb-12">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">
             Github contributions
           </h2>
         </header>
