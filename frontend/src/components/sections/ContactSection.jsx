@@ -14,8 +14,8 @@ const ContactSection = () => {
   const contactMethods = [
     {
       icon: Mail,
-      text: "naveengupta@example.com",
-      href: "mailto:naveengupta@example.com",
+      text: "naveenkumar54111@gmail.com",
+      href: "mailto:naveenkumar54111@gmail.com",
       label: "Send an email"
     },
     {
