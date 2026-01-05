@@ -99,7 +99,7 @@ const ContactSection = () => {
               />
               <label
                 htmlFor="name"
-                className="absolute left-4 -top-2.5 bg-background px-1 text-sm text-muted-foreground transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-3 peer-placeholder-shown:text-muted-foreground peer-focus:-top-2.5 peer-focus:text-sm peer-focus:text-primary"
+                className="absolute left-3 -top-2.5 bg-background px-1 text-sm text-muted-foreground transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-3 peer-placeholder-shown:text-muted-foreground peer-focus:-top-2.5 peer-focus:text-sm peer-focus:text-primary"
               >
                 Your Name
               </label>
@@ -118,7 +118,7 @@ const ContactSection = () => {
               />
               <label
                 htmlFor="email"
-                className="absolute left-4 -top-2.5 bg-background px-1 text-sm text-muted-foreground transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-3 peer-placeholder-shown:text-muted-foreground peer-focus:-top-2.5 peer-focus:text-sm peer-focus:text-primary"
+                className="absolute left-3 -top-2.5 bg-background px-1 text-sm text-muted-foreground transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-3 peer-placeholder-shown:text-muted-foreground peer-focus:-top-2.5 peer-focus:text-sm peer-focus:text-primary"
               >
                 Your Email
               </label>
@@ -137,7 +137,7 @@ const ContactSection = () => {
               />
               <label
                 htmlFor="message"
-                className="absolute left-4 -top-2.5 bg-background px-1 text-sm text-muted-foreground transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-3 peer-placeholder-shown:text-muted-foreground peer-focus:-top-2.5 peer-focus:text-sm peer-focus:text-primary"
+                className="absolute left-3 -top-2.5 bg-background px-1 text-sm text-muted-foreground transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-4 peer-placeholder-shown:text-muted-foreground peer-focus:-top-3 peer-focus:text-sm peer-focus:text-primary"
               >
                 Your Message
               </label>
