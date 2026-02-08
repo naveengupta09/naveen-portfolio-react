@@ -3,106 +3,677 @@ import { ExternalLink, Github, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
+import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 
 const ProjectsSection = () => {
   const [visibleProjects, setVisibleProjects] = useState(6);
 
   const projects = [
     {
-      id: 1,
-      title: "GEU ERP Redesign",
-      description:
-        "A modern, fast, and student-friendly redesign of the GEU Legacy Portal with optimized UI, faster navigation, and easy access to academics, attendance, results, and more.",
-      image:
-        "https://mrcodium.netlify.app/assets/project-preview/geu-preview.webp",
-      demoUrl: "https://geu-erp.onrender.com/login",
-      codeUrl: "https://github.com/abhijeetsinghrajput/geu-erp.git",
+      id: 0,
+      title: "eCommerce-Website",
+      codeUrl: "https://github.com/naveengupta09/eCommerce-Website",
+      description: "",
+      image: "",
+      demoUrl: "",
       technologies: [
-        { label: "Next.js", icon: "/icons/next-js.svg", className: "dark:invert-0 invert" },
+        {
+          label: "Next.js",
+          icon: "/icons/next-js.svg",
+          className: "dark:invert-0 invert",
+        },
         { label: "Node.js", icon: "/icons/node-js.svg" },
         { label: "TypeScript", icon: "/icons/typescript.svg" },
         { label: "Tailwind", icon: "/icons/tailwind.svg" },
-        { label: "Shadcn UI", icon: "/icons/shadcn.svg", className: "dark:invert-0 invert" },
+        {
+          label: "Shadcn UI",
+          icon: "/icons/shadcn.svg",
+          className: "dark:invert-0 invert",
+        },
+      ],
+    },
+    {
+      id: 1,
+      title: "naveen-portfolio-react",
+      codeUrl: "https://github.com/naveengupta09/naveen-portfolio-react",
+      description: "",
+      image: "/projects/portfolio.png",
+      demoUrl: "",
+      technologies: [
+        {
+          label: "Next.js",
+          icon: "/icons/next-js.svg",
+          className: "dark:invert-0 invert",
+        },
+        { label: "Node.js", icon: "/icons/node-js.svg" },
+        { label: "TypeScript", icon: "/icons/typescript.svg" },
+        { label: "Tailwind", icon: "/icons/tailwind.svg" },
+        {
+          label: "Shadcn UI",
+          icon: "/icons/shadcn.svg",
+          className: "dark:invert-0 invert",
+        },
       ],
     },
     {
       id: 2,
-      title: "Notehub",
-      description:
-        "A clean and collaborative note-management platform to write, organize, and share notes. Supports smart formatting, LaTeX, real-time collaboration, and distraction-free UI.",
-      image:
-        "https://mrcodium.netlify.app/assets/project-preview/notehub-preview.webp",
-      demoUrl: "https://notehub-38kp.onrender.com/",
-      codeUrl: "https://github.com/abhijeetSinghRajput/notehub-production.git",
+      title: "Testimonials-Slider",
+      codeUrl: "https://github.com/naveengupta09/Testimonials-Slider",
+      description: "",
+      image: "",
+      demoUrl: "",
       technologies: [
-        { label: "React", icon: "/icons/react.svg" },
-        { label: "Express", icon: "/icons/express.svg", className: "dark:invert-0 invert"  },
+        {
+          label: "Next.js",
+          icon: "/icons/next-js.svg",
+          className: "dark:invert-0 invert",
+        },
         { label: "Node.js", icon: "/icons/node-js.svg" },
-        { label: "MongoDB", icon: "/icons/mongo-db.svg" },
-        { label: "Socket IO", icon: "/icons/socket-io.svg", className: "dark:invert-0 invert"  },
+        { label: "TypeScript", icon: "/icons/typescript.svg" },
+        { label: "Tailwind", icon: "/icons/tailwind.svg" },
+        {
+          label: "Shadcn UI",
+          icon: "/icons/shadcn.svg",
+          className: "dark:invert-0 invert",
+        },
       ],
     },
     {
       id: 3,
-      title: "Chess Engine",
-      description:
-        "A strong chess engine built with advanced algorithms capable of defeating experienced players. Features strategic move evaluation and smart decision-making.",
-      image:
-        "https://mrcodium.netlify.app/assets/project-preview/chess-preview1.webp",
-      demoUrl: "https://chessleague.netlify.app",
-      codeUrl: "https://github.com/abhijeetSinghRajput/ChessEngine.git",
+      title: "Filterable-Image-Gallery",
+      codeUrl: "https://github.com/naveengupta09/Filterable-Image-Gallery",
+      description: "",
+      image: "",
+      demoUrl: "",
       technologies: [
-        { label: "HTML", icon: "/icons/html.svg" },
-        { label: "CSS", icon: "/icons/css.svg" },
-        { label: "JavaScript", icon: "/icons/javascript.svg" },
+        {
+          label: "Next.js",
+          icon: "/icons/next-js.svg",
+          className: "dark:invert-0 invert",
+        },
+        { label: "Node.js", icon: "/icons/node-js.svg" },
+        { label: "TypeScript", icon: "/icons/typescript.svg" },
+        { label: "Tailwind", icon: "/icons/tailwind.svg" },
+        {
+          label: "Shadcn UI",
+          icon: "/icons/shadcn.svg",
+          className: "dark:invert-0 invert",
+        },
       ],
     },
     {
       id: 4,
-      title: "Path Finder Visualizer",
-      description:
-        "An interactive visualizer that demonstrates popular pathfinding algorithms like A*, BFS, DFS, and Dijkstra in real-time for clearer understanding.",
-      image:
-        "https://mrcodium.netlify.app/assets/project-preview/pathfinder-preview.webp",
-      demoUrl: "https://path-explorer.netlify.app",
-      codeUrl:
-        "https://github.com/abhijeetSinghRajput/pathFinderVisualizer.git",
+      title: "Meme-Generator",
+      codeUrl: "https://github.com/naveengupta09/Meme-Generator",
+      description: "",
+      image: "",
+      demoUrl: "",
       technologies: [
-        { label: "HTML", icon: "/icons/html.svg" },
-        { label: "CSS", icon: "/icons/css.svg" },
-        { label: "JavaScript", icon: "/icons/javascript.svg" },
+        {
+          label: "Next.js",
+          icon: "/icons/next-js.svg",
+          className: "dark:invert-0 invert",
+        },
+        { label: "Node.js", icon: "/icons/node-js.svg" },
+        { label: "TypeScript", icon: "/icons/typescript.svg" },
+        { label: "Tailwind", icon: "/icons/tailwind.svg" },
+        {
+          label: "Shadcn UI",
+          icon: "/icons/shadcn.svg",
+          className: "dark:invert-0 invert",
+        },
       ],
     },
     {
       id: 5,
-      title: "Whisper Chat App",
-      description:
-        "A fast and secure real-time chat application with typing indicators, live messaging, authentication, and smooth UI built using MERN stack.",
-      image:
-        "https://mrcodium.netlify.app/assets/project-preview/whisper-preview.webp",
-      demoUrl: "https://whisper-chat-app-m4ks.onrender.com",
-      codeUrl: "https://github.com/abhijeetSinghRajput/whisper",
+      title: "Notes-App-Update",
+      codeUrl: "https://github.com/naveengupta09/Notes-App-Update",
+      description: "",
+      image: "",
+      demoUrl: "",
       technologies: [
-        { label: "React", icon: "/icons/react.svg" },
-        { label: "Express", icon: "/icons/express.svg", className: "dark:invert-0 invert"  },
+        {
+          label: "Next.js",
+          icon: "/icons/next-js.svg",
+          className: "dark:invert-0 invert",
+        },
         { label: "Node.js", icon: "/icons/node-js.svg" },
-        { label: "MongoDB", icon: "/icons/mongo-db.svg" },
-        { label: "Socket IO", icon: "/icons/socket-io.svg" },
+        { label: "TypeScript", icon: "/icons/typescript.svg" },
+        { label: "Tailwind", icon: "/icons/tailwind.svg" },
+        {
+          label: "Shadcn UI",
+          icon: "/icons/shadcn.svg",
+          className: "dark:invert-0 invert",
+        },
       ],
     },
     {
       id: 6,
-      title: "Sorting Simulator",
-      description:
-        "A real-time visualization tool to learn how sorting algorithms work with step-by-step animations for Bubble, Selection, Insertion, Merge, and Quick Sort.",
-      image:
-        "https://mrcodium.netlify.app/assets/project-preview/sorting-preview.webp",
-      demoUrl: "https://sortsimulator.netlify.app",
-      codeUrl: "https://github.com/abhijeetSinghRajput/sorting-simulation.git",
+      title: "Form-Validator",
+      codeUrl: "https://github.com/naveengupta09/Form-Validator",
+      description: "",
+      image: "",
+      demoUrl: "",
       technologies: [
-        { label: "HTML", icon: "/icons/html.svg" },
-        { label: "CSS", icon: "/icons/css.svg" },
-        { label: "JavaScript", icon: "/icons/javascript.svg" },
+        {
+          label: "Next.js",
+          icon: "/icons/next-js.svg",
+          className: "dark:invert-0 invert",
+        },
+        { label: "Node.js", icon: "/icons/node-js.svg" },
+        { label: "TypeScript", icon: "/icons/typescript.svg" },
+        { label: "Tailwind", icon: "/icons/tailwind.svg" },
+        {
+          label: "Shadcn UI",
+          icon: "/icons/shadcn.svg",
+          className: "dark:invert-0 invert",
+        },
+      ],
+    },
+    {
+      id: 7,
+      title: "Bookmark_saver",
+      codeUrl: "https://github.com/naveengupta09/Bookmark_saver",
+      description: "",
+      image: "",
+      demoUrl: "",
+      technologies: [
+        {
+          label: "Next.js",
+          icon: "/icons/next-js.svg",
+          className: "dark:invert-0 invert",
+        },
+        { label: "Node.js", icon: "/icons/node-js.svg" },
+        { label: "TypeScript", icon: "/icons/typescript.svg" },
+        { label: "Tailwind", icon: "/icons/tailwind.svg" },
+        {
+          label: "Shadcn UI",
+          icon: "/icons/shadcn.svg",
+          className: "dark:invert-0 invert",
+        },
+      ],
+    },
+    {
+      id: 8,
+      title: "Movie-App",
+      codeUrl: "https://github.com/naveengupta09/Movie-App",
+      description: "",
+      image: "",
+      demoUrl: "",
+      technologies: [
+        {
+          label: "Next.js",
+          icon: "/icons/next-js.svg",
+          className: "dark:invert-0 invert",
+        },
+        { label: "Node.js", icon: "/icons/node-js.svg" },
+        { label: "TypeScript", icon: "/icons/typescript.svg" },
+        { label: "Tailwind", icon: "/icons/tailwind.svg" },
+        {
+          label: "Shadcn UI",
+          icon: "/icons/shadcn.svg",
+          className: "dark:invert-0 invert",
+        },
+      ],
+    },
+    {
+      id: 9,
+      title: "Dictionary-App",
+      codeUrl: "https://github.com/naveengupta09/Dictionary-App",
+      description: "",
+      image: "",
+      demoUrl: "",
+      technologies: [
+        {
+          label: "Next.js",
+          icon: "/icons/next-js.svg",
+          className: "dark:invert-0 invert",
+        },
+        { label: "Node.js", icon: "/icons/node-js.svg" },
+        { label: "TypeScript", icon: "/icons/typescript.svg" },
+        { label: "Tailwind", icon: "/icons/tailwind.svg" },
+        {
+          label: "Shadcn UI",
+          icon: "/icons/shadcn.svg",
+          className: "dark:invert-0 invert",
+        },
+      ],
+    },
+    {
+      id: 10,
+      title: "Recipe-App",
+      codeUrl: "https://github.com/naveengupta09/Recipe-App",
+      description: "",
+      image: "",
+      demoUrl: "",
+      technologies: [
+        {
+          label: "Next.js",
+          icon: "/icons/next-js.svg",
+          className: "dark:invert-0 invert",
+        },
+        { label: "Node.js", icon: "/icons/node-js.svg" },
+        { label: "TypeScript", icon: "/icons/typescript.svg" },
+        { label: "Tailwind", icon: "/icons/tailwind.svg" },
+        {
+          label: "Shadcn UI",
+          icon: "/icons/shadcn.svg",
+          className: "dark:invert-0 invert",
+        },
+      ],
+    },
+    {
+      id: 11,
+      title: "Currency-Converter",
+      codeUrl: "https://github.com/naveengupta09/Currency-Converter",
+      description: "",
+      image: "",
+      demoUrl: "",
+      technologies: [
+        {
+          label: "Next.js",
+          icon: "/icons/next-js.svg",
+          className: "dark:invert-0 invert",
+        },
+        { label: "Node.js", icon: "/icons/node-js.svg" },
+        { label: "TypeScript", icon: "/icons/typescript.svg" },
+        { label: "Tailwind", icon: "/icons/tailwind.svg" },
+        {
+          label: "Shadcn UI",
+          icon: "/icons/shadcn.svg",
+          className: "dark:invert-0 invert",
+        },
+      ],
+    },
+    {
+      id: 12,
+      title: "Authentication",
+      codeUrl: "https://github.com/naveengupta09/Authentication",
+      description: "",
+      image: "",
+      demoUrl: "",
+      technologies: [
+        {
+          label: "Next.js",
+          icon: "/icons/next-js.svg",
+          className: "dark:invert-0 invert",
+        },
+        { label: "Node.js", icon: "/icons/node-js.svg" },
+        { label: "TypeScript", icon: "/icons/typescript.svg" },
+        { label: "Tailwind", icon: "/icons/tailwind.svg" },
+        {
+          label: "Shadcn UI",
+          icon: "/icons/shadcn.svg",
+          className: "dark:invert-0 invert",
+        },
+      ],
+    },
+    {
+      id: 13,
+      title: "Build_AI_Chatbot",
+      codeUrl: "https://github.com/naveengupta09/Build_AI_Chatbot",
+      description: "",
+      image: "",
+      demoUrl: "",
+      technologies: [
+        {
+          label: "Next.js",
+          icon: "/icons/next-js.svg",
+          className: "dark:invert-0 invert",
+        },
+        { label: "Node.js", icon: "/icons/node-js.svg" },
+        { label: "TypeScript", icon: "/icons/typescript.svg" },
+        { label: "Tailwind", icon: "/icons/tailwind.svg" },
+        {
+          label: "Shadcn UI",
+          icon: "/icons/shadcn.svg",
+          className: "dark:invert-0 invert",
+        },
+      ],
+    },
+    {
+      id: 14,
+      title: "Build-AI-Image-Generator",
+      codeUrl: "https://github.com/naveengupta09/Build-AI-Image-Generator",
+      description: "",
+      image: "",
+      demoUrl: "",
+      technologies: [
+        {
+          label: "Next.js",
+          icon: "/icons/next-js.svg",
+          className: "dark:invert-0 invert",
+        },
+        { label: "Node.js", icon: "/icons/node-js.svg" },
+        { label: "TypeScript", icon: "/icons/typescript.svg" },
+        { label: "Tailwind", icon: "/icons/tailwind.svg" },
+        {
+          label: "Shadcn UI",
+          icon: "/icons/shadcn.svg",
+          className: "dark:invert-0 invert",
+        },
+      ],
+    },
+    {
+      id: 15,
+      title: "Image_Search_Engine",
+      codeUrl: "https://github.com/naveengupta09/Image_Search_Engine",
+      description: "",
+      image: "",
+      demoUrl: "",
+      technologies: [
+        {
+          label: "Next.js",
+          icon: "/icons/next-js.svg",
+          className: "dark:invert-0 invert",
+        },
+        { label: "Node.js", icon: "/icons/node-js.svg" },
+        { label: "TypeScript", icon: "/icons/typescript.svg" },
+        { label: "Tailwind", icon: "/icons/tailwind.svg" },
+        {
+          label: "Shadcn UI",
+          icon: "/icons/shadcn.svg",
+          className: "dark:invert-0 invert",
+        },
+      ],
+    },
+    {
+      id: 16,
+      title: "Drag---Drop",
+      codeUrl: "https://github.com/naveengupta09/Drag---Drop",
+      description: "",
+      image: "",
+      demoUrl: "",
+      technologies: [
+        {
+          label: "Next.js",
+          icon: "/icons/next-js.svg",
+          className: "dark:invert-0 invert",
+        },
+        { label: "Node.js", icon: "/icons/node-js.svg" },
+        { label: "TypeScript", icon: "/icons/typescript.svg" },
+        { label: "Tailwind", icon: "/icons/tailwind.svg" },
+        {
+          label: "Shadcn UI",
+          icon: "/icons/shadcn.svg",
+          className: "dark:invert-0 invert",
+        },
+      ],
+    },
+    {
+      id: 17,
+      title: "Digital_Clock",
+      codeUrl: "https://github.com/naveengupta09/Digital_Clock",
+      description: "",
+      image: "",
+      demoUrl: "",
+      technologies: [
+        {
+          label: "Next.js",
+          icon: "/icons/next-js.svg",
+          className: "dark:invert-0 invert",
+        },
+        { label: "Node.js", icon: "/icons/node-js.svg" },
+        { label: "TypeScript", icon: "/icons/typescript.svg" },
+        { label: "Tailwind", icon: "/icons/tailwind.svg" },
+        {
+          label: "Shadcn UI",
+          icon: "/icons/shadcn.svg",
+          className: "dark:invert-0 invert",
+        },
+      ],
+    },
+    {
+      id: 18,
+      title: "CryptoCurrency_website",
+      codeUrl: "https://github.com/naveengupta09/CryptoCurrency_website",
+      description: "",
+      image: "",
+      demoUrl: "",
+      technologies: [
+        {
+          label: "Next.js",
+          icon: "/icons/next-js.svg",
+          className: "dark:invert-0 invert",
+        },
+        { label: "Node.js", icon: "/icons/node-js.svg" },
+        { label: "TypeScript", icon: "/icons/typescript.svg" },
+        { label: "Tailwind", icon: "/icons/tailwind.svg" },
+        {
+          label: "Shadcn UI",
+          icon: "/icons/shadcn.svg",
+          className: "dark:invert-0 invert",
+        },
+      ],
+    },
+    {
+      id: 19,
+      title: "product_page_esign",
+      codeUrl: "https://github.com/naveengupta09/product_page_esign",
+      description: "",
+      image: "",
+      demoUrl: "",
+      technologies: [
+        {
+          label: "Next.js",
+          icon: "/icons/next-js.svg",
+          className: "dark:invert-0 invert",
+        },
+        { label: "Node.js", icon: "/icons/node-js.svg" },
+        { label: "TypeScript", icon: "/icons/typescript.svg" },
+        { label: "Tailwind", icon: "/icons/tailwind.svg" },
+        {
+          label: "Shadcn UI",
+          icon: "/icons/shadcn.svg",
+          className: "dark:invert-0 invert",
+        },
+      ],
+    },
+    {
+      id: 20,
+      title: "Music-Player",
+      codeUrl: "https://github.com/naveengupta09/Music-Player",
+      description: "",
+      image: "",
+      demoUrl: "",
+      technologies: [
+        {
+          label: "Next.js",
+          icon: "/icons/next-js.svg",
+          className: "dark:invert-0 invert",
+        },
+        { label: "Node.js", icon: "/icons/node-js.svg" },
+        { label: "TypeScript", icon: "/icons/typescript.svg" },
+        { label: "Tailwind", icon: "/icons/tailwind.svg" },
+        {
+          label: "Shadcn UI",
+          icon: "/icons/shadcn.svg",
+          className: "dark:invert-0 invert",
+        },
+      ],
+    },
+    {
+      id: 21,
+      title: "QR_-Code_Generator",
+      codeUrl: "https://github.com/naveengupta09/QR_-Code_Generator",
+      description: "",
+      image: "",
+      demoUrl: "",
+      technologies: [
+        {
+          label: "Next.js",
+          icon: "/icons/next-js.svg",
+          className: "dark:invert-0 invert",
+        },
+        { label: "Node.js", icon: "/icons/node-js.svg" },
+        { label: "TypeScript", icon: "/icons/typescript.svg" },
+        { label: "Tailwind", icon: "/icons/tailwind.svg" },
+        {
+          label: "Shadcn UI",
+          icon: "/icons/shadcn.svg",
+          className: "dark:invert-0 invert",
+        },
+      ],
+    },
+    {
+      id: 22,
+      title: "Quote-Generator",
+      codeUrl: "https://github.com/naveengupta09/Quote-Generator",
+      description: "",
+      image: "",
+      demoUrl: "",
+      technologies: [
+        {
+          label: "Next.js",
+          icon: "/icons/next-js.svg",
+          className: "dark:invert-0 invert",
+        },
+        { label: "Node.js", icon: "/icons/node-js.svg" },
+        { label: "TypeScript", icon: "/icons/typescript.svg" },
+        { label: "Tailwind", icon: "/icons/tailwind.svg" },
+        {
+          label: "Shadcn UI",
+          icon: "/icons/shadcn.svg",
+          className: "dark:invert-0 invert",
+        },
+      ],
+    },
+    {
+      id: 23,
+      title: "Age-Calculator",
+      codeUrl: "https://github.com/naveengupta09/Age-Calculator",
+      description: "",
+      image: "",
+      demoUrl: "",
+      technologies: [
+        {
+          label: "Next.js",
+          icon: "/icons/next-js.svg",
+          className: "dark:invert-0 invert",
+        },
+        { label: "Node.js", icon: "/icons/node-js.svg" },
+        { label: "TypeScript", icon: "/icons/typescript.svg" },
+        { label: "Tailwind", icon: "/icons/tailwind.svg" },
+        {
+          label: "Shadcn UI",
+          icon: "/icons/shadcn.svg",
+          className: "dark:invert-0 invert",
+        },
+      ],
+    },
+    {
+      id: 24,
+      title: "Notes-App",
+      codeUrl: "https://github.com/naveengupta09/Notes-App",
+      description: "",
+      image: "",
+      demoUrl: "",
+      technologies: [
+        {
+          label: "Next.js",
+          icon: "/icons/next-js.svg",
+          className: "dark:invert-0 invert",
+        },
+        { label: "Node.js", icon: "/icons/node-js.svg" },
+        { label: "TypeScript", icon: "/icons/typescript.svg" },
+        { label: "Tailwind", icon: "/icons/tailwind.svg" },
+        {
+          label: "Shadcn UI",
+          icon: "/icons/shadcn.svg",
+          className: "dark:invert-0 invert",
+        },
+      ],
+    },
+    {
+      id: 25,
+      title: "Random-Password-Generator",
+      codeUrl: "https://github.com/naveengupta09/Random-Password-Generator",
+      description: "",
+      image: "",
+      demoUrl: "",
+      technologies: [
+        {
+          label: "Next.js",
+          icon: "/icons/next-js.svg",
+          className: "dark:invert-0 invert",
+        },
+        { label: "Node.js", icon: "/icons/node-js.svg" },
+        { label: "TypeScript", icon: "/icons/typescript.svg" },
+        { label: "Tailwind", icon: "/icons/tailwind.svg" },
+        {
+          label: "Shadcn UI",
+          icon: "/icons/shadcn.svg",
+          className: "dark:invert-0 invert",
+        },
+      ],
+    },
+    {
+      id: 26,
+      title: "Quiz-App",
+      codeUrl: "https://github.com/naveengupta09/Quiz-App",
+      description: "",
+      image: "",
+      demoUrl: "",
+      technologies: [
+        {
+          label: "Next.js",
+          icon: "/icons/next-js.svg",
+          className: "dark:invert-0 invert",
+        },
+        { label: "Node.js", icon: "/icons/node-js.svg" },
+        { label: "TypeScript", icon: "/icons/typescript.svg" },
+        { label: "Tailwind", icon: "/icons/tailwind.svg" },
+        {
+          label: "Shadcn UI",
+          icon: "/icons/shadcn.svg",
+          className: "dark:invert-0 invert",
+        },
+      ],
+    },
+    {
+      id: 27,
+      title: "Coffee-Website",
+      codeUrl: "https://github.com/naveengupta09/Coffee-Website",
+      description: "",
+      image: "",
+      demoUrl: "",
+      technologies: [
+        {
+          label: "Next.js",
+          icon: "/icons/next-js.svg",
+          className: "dark:invert-0 invert",
+        },
+        { label: "Node.js", icon: "/icons/node-js.svg" },
+        { label: "TypeScript", icon: "/icons/typescript.svg" },
+        { label: "Tailwind", icon: "/icons/tailwind.svg" },
+        {
+          label: "Shadcn UI",
+          icon: "/icons/shadcn.svg",
+          className: "dark:invert-0 invert",
+        },
+      ],
+    },
+    {
+      id: 28,
+      title: "crypto_price_tracker",
+      codeUrl: "https://github.com/naveengupta09/crypto_price_tracker",
+      description: "",
+      image: "",
+      demoUrl: "",
+      technologies: [
+        {
+          label: "Next.js",
+          icon: "/icons/next-js.svg",
+          className: "dark:invert-0 invert",
+        },
+        { label: "Node.js", icon: "/icons/node-js.svg" },
+        { label: "TypeScript", icon: "/icons/typescript.svg" },
+        { label: "Tailwind", icon: "/icons/tailwind.svg" },
+        {
+          label: "Shadcn UI",
+          icon: "/icons/shadcn.svg",
+          className: "dark:invert-0 invert",
+        },
       ],
     },
   ];
@@ -115,7 +686,10 @@ const ProjectsSection = () => {
   const hasMoreProjects = visibleProjects < projects.length;
 
   return (
-    <section id="projects" className="animate-in fade-in slide-in-from-bottom duration-700">
+    <section
+      id="projects"
+      className="animate-in fade-in slide-in-from-bottom duration-700"
+    >
       <div className="container mx-auto max-w-7xl">
         <h2 className="text-2xl md:text-3xl font-bold mb-12">Projects</h2>
 
@@ -129,11 +703,30 @@ const ProjectsSection = () => {
             >
               {/* Project Image */}
               <div className="relative aspect-video overflow-hidden bg-muted">
+                <Avatar className="rounded-none w-full h-full aspect-video">
+                  <AvatarImage
+                    src={project.image}
+                    alt={project.title}
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    onErrorCapture={() => console.log("captured first")}
+                    onError={() => console.log("bubbled later")}
+                  />
+                  <AvatarFallback>
+                    <img
+                      className="w-full h-full object-cover opacity-20"
+                      src="https://placehold.net/400x400.png"
+                      alt={`${project.title} placeholder`}
+                    />
+                  </AvatarFallback>
+                </Avatar>
                 <img
                   src={project.image}
                   alt={project.title}
                   loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  onErrorCapture={() => console.log("captured first")}
+                  onError={() => console.log("bubbled later")}
                 />
               </div>
 
@@ -155,7 +748,10 @@ const ProjectsSection = () => {
                       <img
                         src={tech.icon}
                         alt={`${tech.label} icon`}
-                        className={cn("w-3.5 h-3.5 object-contain", tech.className)}
+                        className={cn(
+                          "w-3.5 h-3.5 object-contain",
+                          tech.className,
+                        )}
                       />
                       <span>{tech.label}</span>
                     </Badge>
