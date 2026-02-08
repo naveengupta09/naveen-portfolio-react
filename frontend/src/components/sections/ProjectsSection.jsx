@@ -14,7 +14,7 @@ const ProjectsSection = () => {
       title: "eCommerce-Website",
       codeUrl: "https://github.com/naveengupta09/eCommerce-Website",
       description: "",
-      image: "",
+      image: "/projects/ECommerce.png",
       demoUrl: "",
       technologies: [
         {
