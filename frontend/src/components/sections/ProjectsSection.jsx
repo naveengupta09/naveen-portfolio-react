@@ -79,6 +79,23 @@ const ProjectsSection = () => {
       ],
     },
     {
+      id: 4,
+      title: "Agency.ai",
+      codeUrl: "https://github.com/naveengupta09/Agency_AI",
+      description: "",
+      image: "/projects/Agency.png",
+      demoUrl: "",
+      technologies: [
+        { label: "React.js", icon: "/icons/react.svg" },
+        { label: "Tailwind", icon: "/icons/tailwind.svg" },
+        {
+          label: "Shadcn UI",
+          icon: "/icons/shadcn.svg",
+          className: "dark:invert-0 invert",
+        },
+      ],
+    },
+    {
       id: 10,
       title: "Recipe-App",
       codeUrl: "https://github.com/naveengupta09/Recipe-App",
@@ -170,29 +187,6 @@ const ProjectsSection = () => {
         },
       ],
     },
-    // {
-    //   id: 4,
-    //   title: "Meme-Generator",
-    //   codeUrl: "https://github.com/naveengupta09/Meme-Generator",
-    //   description: "",
-    //   image: "",
-    //   demoUrl: "",
-    //   technologies: [
-    //     {
-    //       label: "Next.js",
-    //       icon: "/icons/next-js.svg",
-    //       className: "dark:invert-0 invert",
-    //     },
-    //     { label: "Node.js", icon: "/icons/node-js.svg" },
-    //     { label: "TypeScript", icon: "/icons/typescript.svg" },
-    //     { label: "Tailwind", icon: "/icons/tailwind.svg" },
-    //     {
-    //       label: "Shadcn UI",
-    //       icon: "/icons/shadcn.svg",
-    //       className: "dark:invert-0 invert",
-    //     },
-    //   ],
-    // },
     {
       id: 5,
       title: "Notes-App-Update",
