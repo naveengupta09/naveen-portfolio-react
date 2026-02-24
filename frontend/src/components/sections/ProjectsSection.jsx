@@ -692,36 +692,34 @@ const ProjectsSection = () => {
           {displayedProjects.map((project, index) => (
             <div
               key={project.id}
-              className="group rounded-2xl border bg-muted/30 overflow-hidden hover:shadow-lg transition-all duration-300 animate-in fade-in slide-in-from-bottom"
+              className="group rounded-2xl border bg-muted/30 overflow-hidden hover:shadow-2xl hover:shadow-primary/20 hover:border-primary/50 transition-all duration-500 animate-in fade-in slide-in-from-bottom"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               {/* Project Image */}
-              <div className="relative aspect-video overflow-hidden bg-muted">
-                <Avatar className="rounded-none w-full h-full aspect-video">
-                  <AvatarImage
-                    src={project.image}
-                    alt={project.title}
-                    loading="lazy"
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                    onErrorCapture={() => console.log("captured first")}
-                    onError={() => console.log("bubbled later")}
-                  />
-                  <AvatarFallback>
-                    <img
-                      className="w-full h-full object-cover opacity-20"
-                      src="https://placehold.net/400x400.png"
-                      alt={`${project.title} placeholder`}
+              <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-primary/5 via-muted to-secondary/5 p-3">
+                {/* Inset border frame with shadow */}
+                <div className="relative w-full h-full rounded-xl overflow-hidden shadow-[inset_0_0_20px_rgba(0,0,0,0.3)] border-2 border-primary/20 group-hover:border-primary/40 group-hover:shadow-[inset_0_0_30px_rgba(0,0,0,0.4)] transition-all duration-500">
+                  {/* Decorative gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
+                  
+                  <Avatar className="rounded-none w-full h-full aspect-video relative z-[5]">
+                    <AvatarImage
+                      src={project.image}
+                      alt={project.title}
+                      loading="lazy"
+                      className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
+                      onErrorCapture={() => console.log("captured first")}
+                      onError={() => console.log("bubbled later")}
                     />
-                  </AvatarFallback>
-                </Avatar>
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  onErrorCapture={() => console.log("captured first")}
-                  onError={() => console.log("bubbled later")}
-                />
+                    <AvatarFallback>
+                      <img
+                        className="w-full h-full object-cover opacity-20"
+                        src="https://placehold.net/400x400.png"
+                        alt={`${project.title} placeholder`}
+                      />
+                    </AvatarFallback>
+                  </Avatar>
+                </div>
               </div>
 
               {/* Project Content */}
