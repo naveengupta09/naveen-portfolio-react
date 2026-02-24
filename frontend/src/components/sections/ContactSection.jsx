@@ -15,7 +15,7 @@ const ContactSection = () => {
     {
       icon: Mail,
       text: "naveenkumar54111@gmail.com",
-      href: "mailto:naveenkumar54111@gmail.com",
+      href: "https://mail.google.com/mail/?view=cm&to=naveenkumar54111@gmail.com",
       label: "Send an email"
     },
     {
