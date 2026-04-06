@@ -11,11 +11,11 @@ const ProjectsSection = () => {
   const projects = [
     {
       id: 0,
-      title: "eCommerce-Website",
-      codeUrl: "https://github.com/naveengupta09/eCommerce-Website",
+      title: "Legal-Olympiad-platform",
+      codeUrl: "https://github.com/naveengupta09/Legal-Olympiad-platform",
       description: "",
-      image: "/projects/ECommerce.png",
-      demoUrl: "",
+      image: "/projects/legal-olympiad.png",
+      demoUrl: "https://legal-olympiad.vercel.app/",
       technologies: [
         {
           label: "Next.js",
@@ -34,11 +34,11 @@ const ProjectsSection = () => {
     },
     {
       id: 1,
-      title: "naveen-portfolio-react",
-      codeUrl: "https://github.com/naveengupta09/naveen-portfolio-react",
+      title: "eCommerce-Website",
+      codeUrl: "https://github.com/naveengupta09/eCommerce-Website",
       description: "",
-      image: "/projects/portfolio.png",
-      demoUrl: "",
+      image: "/projects/ECommerce.png",
+      demoUrl: "https://ecommerce-website.netlify.app/",
       technologies: [
         {
           label: "Next.js",
@@ -57,6 +57,52 @@ const ProjectsSection = () => {
     },
     {
       id: 2,
+      title: "naveen-portfolio-react",
+      codeUrl: "https://github.com/naveengupta09/naveen-portfolio-react",
+      description: "",
+      image: "/projects/portfolio.png",
+      demoUrl: "https://naveengupta.netlify.app/",
+      technologies: [
+        {
+          label: "Next.js",
+          icon: "/icons/next-js.svg",
+          className: "dark:invert-0 invert",
+        },
+        { label: "Node.js", icon: "/icons/node-js.svg" },
+        { label: "TypeScript", icon: "/icons/typescript.svg" },
+        { label: "Tailwind", icon: "/icons/tailwind.svg" },
+        {
+          label: "Shadcn UI",
+          icon: "/icons/shadcn.svg",
+          className: "dark:invert-0 invert",
+        },
+      ],
+    },
+    {
+      id: 3,
+      title: "Buy_Premium_Product_Page",
+      codeUrl: "https://github.com/naveengupta09/Appscrip-task-naveen-kumar",
+      description: "",
+      image: "/projects/Buy_Premium.png",
+      demoUrl: "https://appscrip-task-naveen-kumar.netlify.app/products",
+      technologies: [
+        {
+          label: "Next.js",
+          icon: "/icons/next-js.svg",
+          className: "dark:invert-0 invert",
+        },
+        { label: "Node.js", icon: "/icons/node-js.svg" },
+        { label: "TypeScript", icon: "/icons/typescript.svg" },
+        { label: "Tailwind", icon: "/icons/tailwind.svg" },
+        {
+          label: "Shadcn UI",
+          icon: "/icons/shadcn.svg",
+          className: "dark:invert-0 invert",
+        },
+      ],
+    },
+    {
+      id: 4,
       title: "CryptoCurrency_website",
       codeUrl: "https://github.com/naveengupta09/CryptoCurrency_website",
       description: "",
@@ -79,7 +125,7 @@ const ProjectsSection = () => {
       ],
     },
     {
-      id: 3,
+      id: 5,
       title: "Agency.ai",
       codeUrl: "https://github.com/naveengupta09/Agency_AI",
       description: "",
@@ -96,7 +142,7 @@ const ProjectsSection = () => {
       ],
     },
     {
-      id: 4,
+      id: 6,
       title: "Recipe-App",
       codeUrl: "https://github.com/naveengupta09/Recipe-App",
       description: "",
@@ -119,30 +165,7 @@ const ProjectsSection = () => {
       ],
     },
     {
-      id: 5,
-      title: "Buy_Premium_Product_Page",
-      codeUrl: "https://github.com/naveengupta09/Appscrip-task-naveen-kumar",
-      description: "",
-      image: "/projects/Buy_Premium.png",
-      demoUrl: "",
-      technologies: [
-        {
-          label: "Next.js",
-          icon: "/icons/next-js.svg",
-          className: "dark:invert-0 invert",
-        },
-        { label: "Node.js", icon: "/icons/node-js.svg" },
-        { label: "TypeScript", icon: "/icons/typescript.svg" },
-        { label: "Tailwind", icon: "/icons/tailwind.svg" },
-        {
-          label: "Shadcn UI",
-          icon: "/icons/shadcn.svg",
-          className: "dark:invert-0 invert",
-        },
-      ],
-    },
-    {
-      id: 6,
+      id: 7,
       title: "Digital_Clock",
       codeUrl: "https://github.com/naveengupta09/Digital_Clock",
       description: "",
@@ -165,7 +188,7 @@ const ProjectsSection = () => {
       ],
     },
     {
-      id: 7,
+      id: 8,
       title: "Testimonials-Slider",
       codeUrl: "https://github.com/naveengupta09/Testimonials-Slider",
       description: "",
@@ -188,7 +211,7 @@ const ProjectsSection = () => {
       ],
     },
     {
-      id: 8,
+      id: 9,
       title: "Filterable-Image-Gallery",
       codeUrl: "https://github.com/naveengupta09/Filterable-Image-Gallery",
       description: "",
@@ -211,7 +234,7 @@ const ProjectsSection = () => {
       ],
     },
     {
-      id: 9,
+      id: 10,
       title: "Notes-App-Update",
       codeUrl: "https://github.com/naveengupta09/Notes-App-Update",
       description: "",
@@ -234,7 +257,7 @@ const ProjectsSection = () => {
       ],
     },
     {
-      id: 10,
+      id: 11,
       title: "Form-Validator",
       codeUrl: "https://github.com/naveengupta09/Form-Validator",
       description: "",
@@ -257,7 +280,7 @@ const ProjectsSection = () => {
       ],
     },
     {
-      id: 11,
+      id: 12,
       title: "Bookmark_saver",
       codeUrl: "https://github.com/naveengupta09/Bookmark_saver",
       description: "",
@@ -280,7 +303,7 @@ const ProjectsSection = () => {
       ],
     },
     {
-      id: 12,
+      id: 13,
       title: "Movie-App",
       codeUrl: "https://github.com/naveengupta09/Movie-App",
       description: "",
@@ -303,7 +326,7 @@ const ProjectsSection = () => {
       ],
     },
     {
-      id: 13,
+      id: 14,
       title: "Dictionary-App",
       codeUrl: "https://github.com/naveengupta09/Dictionary-App",
       description: "",
@@ -326,7 +349,7 @@ const ProjectsSection = () => {
       ],
     },
     {
-      id: 14,
+      id: 15,
       title: "Currency-Converter",
       codeUrl: "https://github.com/naveengupta09/Currency-Converter",
       description: "",
@@ -349,7 +372,7 @@ const ProjectsSection = () => {
       ],
     },
     {
-      id: 15,
+      id: 16,
       title: "Authentication",
       codeUrl: "https://github.com/naveengupta09/Authentication",
       description: "",
@@ -395,7 +418,7 @@ const ProjectsSection = () => {
     //   ],
     // },
     {
-      id: 16,
+      id: 17,
       title: "Build-AI-Image-Generator",
       codeUrl: "https://github.com/naveengupta09/Build-AI-Image-Generator",
       description: "",
@@ -418,7 +441,7 @@ const ProjectsSection = () => {
       ],
     },
     {
-      id: 17,
+      id: 18,
       title: "Image_Search_Engine",
       codeUrl: "https://github.com/naveengupta09/Image_Search_Engine",
       description: "",
@@ -441,7 +464,7 @@ const ProjectsSection = () => {
       ],
     },
     {
-      id: 18,
+      id: 19,
       title: "Drag---Drop",
       codeUrl: "https://github.com/naveengupta09/Drag---Drop",
       description: "",
@@ -464,7 +487,7 @@ const ProjectsSection = () => {
       ],
     },
     {
-      id: 19,
+      id: 20,
       title: "product_page_esign",
       codeUrl: "https://github.com/naveengupta09/product_page_esign",
       description: "",
@@ -487,7 +510,7 @@ const ProjectsSection = () => {
       ],
     },
     {
-      id: 20,
+      id: 21,
       title: "Music-Player",
       codeUrl: "https://github.com/naveengupta09/Music-Player",
       description: "",
@@ -510,7 +533,7 @@ const ProjectsSection = () => {
       ],
     },
     {
-      id: 21,
+      id: 22,
       title: "Quote-Generator",
       codeUrl: "https://github.com/naveengupta09/Quote-Generator",
       description: "",
@@ -533,7 +556,7 @@ const ProjectsSection = () => {
       ],
     },
     {
-      id: 22,
+      id: 23,
       title: "Age-Calculator",
       codeUrl: "https://github.com/naveengupta09/Age-Calculator",
       description: "",
@@ -556,7 +579,7 @@ const ProjectsSection = () => {
       ],
     },
     {
-      id: 23,
+      id: 24,
       title: "Notes-App",
       codeUrl: "https://github.com/naveengupta09/Notes-App",
       description: "",
@@ -579,7 +602,7 @@ const ProjectsSection = () => {
       ],
     },
     {
-      id: 24,
+      id: 25,
       title: "Random-Password-Generator",
       codeUrl: "https://github.com/naveengupta09/Random-Password-Generator",
       description: "",
@@ -602,7 +625,7 @@ const ProjectsSection = () => {
       ],
     },
     {
-      id: 25,
+      id: 26,
       title: "Quiz-App",
       codeUrl: "https://github.com/naveengupta09/Quiz-App",
       description: "",
@@ -625,7 +648,7 @@ const ProjectsSection = () => {
       ],
     },
     {
-      id: 26,
+      id: 27,
       title: "Coffee-Website",
       codeUrl: "https://github.com/naveengupta09/Coffee-Website",
       description: "",
@@ -648,7 +671,7 @@ const ProjectsSection = () => {
       ],
     },
     {
-      id: 27,
+      id: 28,
       title: "crypto_price_tracker",
       codeUrl: "https://github.com/naveengupta09/crypto_price_tracker",
       description: "",
