@@ -8,7 +8,7 @@ const EducationSection = () => {
       degree: "Master of Computer Applications (MCA)",
       institution: "Graphic Era University, Dehradun",
       duration: "2024 - 2026 (Currently pursuing)",
-      grade: "CGPA: 7.8/10",
+      grade: "CGPA: 7.6/10",
     },
     {
       id: 2,
