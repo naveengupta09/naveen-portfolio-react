@@ -41,15 +41,13 @@ const AboutSection = () => {
           <div className="flex-1 space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
               Hey! I'm <strong className="text-foreground">Naveen Kumar</strong>
-              , a passionate{" "}
-              <span className="text-foreground font-medium">
-                MERN stack developer
-              </span>{" "}
-              who loves building smooth, fast, and enjoyable full-stack
-              applications. I've worked on{" "}
-              <span className="text-foreground font-medium">10+ projects</span>{" "}
-              — from UI ideas to end-to-end products — always experimenting and
-              adding my own touch.
+, an{" "}
+<span className="text-foreground font-medium">
+  Assistant Professor in the CSE Department at KU, Gandhinagar, Gujarat
+</span>
+{" "}with a passion for teaching, technology, and software development. I enjoy
+mentoring students, building interactive web applications, and solving complex
+problems through efficient algorithms.
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed">

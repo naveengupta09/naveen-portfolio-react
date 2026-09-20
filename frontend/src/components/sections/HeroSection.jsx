@@ -20,9 +20,8 @@ const HeroSection = () => {
   const [showDownloadDialog, setShowDownloadDialog] = useState(false);
 
   const typingTexts = [
-    "Full Stack Developer",
+    "Assistant Professor",
     "Problem Solver",
-    "MERN Developer",
     "Algorithm Enthusiast",
   ];
 
@@ -86,8 +85,7 @@ const HeroSection = () => {
               </div>
 
               <p className="text-lg text-muted-foreground leading-relaxed max-w-md">
-                I build interactive web apps using modern technologies and solve
-                complex problems through efficient algorithms.
+                Assistant Professor passionate about teaching, research, and technology, with a strong foundation in Computer Science. Skilled in web development and efficient problem-solving.
               </p>
 
               {/* Tech Stack */}
